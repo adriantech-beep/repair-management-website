@@ -1,6 +1,11 @@
-import { GiStethoscope } from "react-icons/gi";
-import { RiLoopRightFill } from "react-icons/ri";
+import { RiLoopRightFill, RiStethoscopeFill } from "react-icons/ri";
 import { VscTools } from "react-icons/vsc";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 const serviceMenu = [
   {
@@ -17,7 +22,7 @@ const serviceMenu = [
   },
   {
     name: "Free Diagnostic",
-    icon: <GiStethoscope />,
+    icon: <RiStethoscopeFill />,
     description:
       "Unsure about the issue with your device? Don't worry, we offer a complimentary diagnosis.",
   },
@@ -25,14 +30,19 @@ const serviceMenu = [
 
 export default function ServiceTab() {
   return (
-    <ul className="h-[250px] flex gap-12">
+    <ul className="h-[250px] flex gap-12 mt-12">
       {serviceMenu.map((service) => (
-        <li key={service.name}>
-          <div className="w-[280px] h-[250px] flex flex-col items-center justify-center bg-primary-50 p-2">
-            <p>{service.icon}</p>
-            <p>{service.name}</p>
-            <p>{service.description}</p>
-          </div>
+        <li
+          key={service.name}
+          className="w-[280px] h-[250px] flex flex-col items-center justify-between bg-primary-0 py-8 px-4 rounded-lg shadow-lg"
+        >
+          <p className="text-5xl text-accent-700">{service.icon}</p>
+          <p className={`${poppins.className} font-bold text-accent-700`}>
+            {service.name}
+          </p>
+          <p className=" text-accent-600 font-light leading-[120%]">
+            {service.description}
+          </p>
         </li>
       ))}
     </ul>

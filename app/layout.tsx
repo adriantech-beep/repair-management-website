@@ -1,15 +1,15 @@
 import { ReactNode } from "react";
 import "@/app/globals.css";
 import Header from "./_components/Header";
-import { Lato } from "next/font/google";
+import { Inter } from "next/font/google";
 
 interface RootLayoutProps {
   children: ReactNode;
 }
-// const lato = Lato({
-//   subsets: ["latin"],
-//   display: "swap",
-// });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   title: {
@@ -23,9 +23,9 @@ export const metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className="min-h-full">
+      <body className={`${inter.className} min-h-full`}>
         <Header />
-        <div className="bg-primary-100">
+        <div className="bg-primary-50">
           <main className="w-full">{children}</main>
         </div>
       </body>

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^14.2.15",
     "@supabase/supabase-js": "^2.49.8",
     "next": "15.3.2",
     "postcss": "^8.5.3",
