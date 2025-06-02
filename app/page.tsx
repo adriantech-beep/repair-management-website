@@ -2,7 +2,6 @@ import GadgetsTab from "./_components/GadgetsTab";
 import Hero from "./_components/Hero";
 import ServiceTab from "./_components/ServiceTab";
 import OperationsTab from "./_components/OperationsTab";
-import Footer from "./_components/Footer";
 
 export default function Page() {
   return (
@@ -11,7 +10,6 @@ export default function Page() {
       <ServiceTab />
       <GadgetsTab />
       <OperationsTab />
-      <Footer />
     </div>
   );
 }

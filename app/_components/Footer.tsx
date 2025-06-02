@@ -1,6 +1,7 @@
 import { CiMobile3 } from "react-icons/ci";
-import FooterOperations from "./FooterOperations";
 import { Poppins, Lato } from "next/font/google";
+import SocialIcons from "./SocialIcons";
+import FooterForm from "./FooterForm";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -64,7 +65,8 @@ export default function Footer() {
             </li>
           ))}
         </ul>
-        <FooterOperations />
+        <FooterForm />
+        <SocialIcons />
       </div>
 
       <div

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ReactNode } from "react";
 import { Poppins } from "next/font/google";
@@ -13,6 +15,7 @@ interface ButtonProps {
 const poppins = Poppins({
   subsets: ["latin"],
   weight: "500",
+  display: "swap",
 });
 const base = `${poppins.className} shadow-md text-sm font-semibold bg-brand-100 text-stone-100 tracking-wide  transition-all duration-300 focus:outline-none cursor-pointer focus:ring-offset-2 disabled:cursor-not-allowed`;
 

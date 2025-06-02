@@ -1,4 +1,4 @@
-import HeroImage from "@/public/technician-clearing-circuit-board-disassembled-laptop.jpg";
+import HeroImage from "@/public/mobile-repair.png";
 import Image from "next/image";
 import Button from "./Button";
 import { Lato } from "next/font/google";
@@ -30,11 +30,13 @@ export default function Hero() {
           </div>
         </div>
       </section>
-      <section className="relative w-[474px] h-full ">
+      <section className="relative aspect-ratio w-[474px] h-full ">
         <Image
           fill
           src={HeroImage}
-          alt="technician clearing circuit board disassembled laptop"
+          placeholder="blur"
+          alt="A hand holding a broken cellphone"
+          className="rounded-r-lg object-cover"
         />
       </section>
     </div>

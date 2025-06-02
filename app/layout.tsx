@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
-import "@/app/globals.css";
+import "@/app/_styles/globals.css";
 import Header from "./_components/Header";
 import { Inter } from "next/font/google";
+import Footer from "./_components/Footer";
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -25,8 +26,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body className={`${inter.className} min-h-full`}>
         <Header />
-        <div className="bg-primary-50">
-          <main className="w-full">{children}</main>
+        <div className="bg-primary-50 ">
+          <main className="w-full h-full flex items-center justify-center">
+            {children}
+          </main>
+
+          <Footer />
         </div>
       </body>
     </html>
