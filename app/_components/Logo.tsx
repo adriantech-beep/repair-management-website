@@ -11,12 +11,12 @@ export default function Logo() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function fetchData() {
-      const data = await getCompanySettings();
-      setImage(data.company_logo);
+    async function fetchImage() {
+      const image = await getCompanySettings();
+      setImage(image.company_logo);
       setLoading(false);
     }
-    fetchData();
+    fetchImage();
   }, []);
 
   return (
